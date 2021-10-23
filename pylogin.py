@@ -1,6 +1,79 @@
 import os
 import sys
-import create
+
+
+class CreateFirebase():
+    def checkre(self):
+       #########################PRINT COLORS################################
+       def prGreen(skk): print("\033[92m {}\033[00m" .format(skk))
+       def prRed(skk): print("\033[91m {}\033[00m" .format(skk))
+       def prCyan(skk): print("\033[96m {}\033[00m" .format(skk))
+       def prYellow(skk): print("\033[93m {}\033[00m" .format(skk))
+       def prLGray(skk): print("\033[97m {}\033[00m" .format(skk))
+       ####################################################################
+
+       prRed("\n\n")
+       prGreen("CHECKING DEPENDENCIES: ")
+       print("\n\n")
+       prRed("DO YOU ALREDY INSTALLED FIREBASE(yes/no)?")
+       checkan=input(" => ")
+
+       def chf(arg):
+           if checkan == "yes":
+               prGreen("OK...")
+           elif checkan == "no":
+               prCyan("INSTALLING DEPENDENCIES: ")
+               prCyan("npm i firebase")
+               os.system("npm i firebase")
+               prGreen("\n\nDEPENDENCIES --> OK")
+           else:
+               chf()
+
+       if checkan == "yes":
+           prGreen("OK...")
+       elif checkan == "no":
+           prCyan("INSTALLING DEPENDENCIES: ")
+           prCyan("npm i firebase")
+           os.system("npm i firebase")
+           prGreen("\n\nDEPENDENCIES --> OK")
+       else:
+           chf()
+
+
+    def createFirebase(self, ak, ad, pi, sb, msi, ai):
+        #########################PRINT COLORS################################
+        def prGreen(skk): print("\033[92m {}\033[00m" .format(skk))
+        def prRed(skk): print("\033[91m {}\033[00m" .format(skk))
+        def prCyan(skk): print("\033[96m {}\033[00m" .format(skk))
+        def prYellow(skk): print("\033[93m {}\033[00m" .format(skk))
+        def prLGray(skk): print("\033[97m {}\033[00m" .format(skk))
+        ####################################################################
+
+        print("\n\n\n")
+        prRed("GETING THE Pylog SOURCE...")
+        prYellow("git clone https://github.com/jazzman07/log.git")
+        os.system("git clone https://github.com/jazzman07/log.git")
+
+        prCyan("WRITING firebase.js...")
+
+        f = open("log/src/firebase.js", "a")
+        f.write("""import firebase from "firebase/compat/app" """)
+        f.write("\n")
+        f.write("""import "firebase/compat/auth" """)
+        f.write("""\n\n""")
+        f.write("""const app = firebase.initializeApp({ \n""")
+        f.write(f"""      apiKey: '{ak}', \n""")
+        f.write(f"""      authDomain: '{ad}', \n""")
+        f.write(f"""      projectId: '{pi}', \n""")
+        f.write(f"""      storageBucket: '{sb}', \n""")
+        f.write(f"""      messagingSenderId: '{msi}', \n""")
+        f.write(f"""      appId: '{ai}' \n""")
+        f.write(""" \n""")
+        f.write("""}) \n""")
+        f.write(""" \n""")
+        f.write(""" \n""")
+        f.write("""export const auth = app.auth() \n""")
+        f.write("""export default app \n""")
 
 #########################PRINT COLORS################################
 def prGreen(skk): print("\033[92m {}\033[00m" .format(skk))
@@ -132,7 +205,7 @@ def fcc():
     correctinfchoice = input(" => ")
 
     if correctinfchoice == "yes":
-        pro=create.CreateFirebase()
+        pro=CreateFirebase()
         pro.checkre()
         pro.createFirebase(apikey, authDom, projId, storageBuck, messagingSenderId, appId)
     elif correctinfchoice == "no":
@@ -142,7 +215,7 @@ def fcc():
         fcc()
 
 if correctinfchoice == "yes":
-    pro=create.CreateFirebase()
+    pro=CreateFirebase()
     pro.checkre()
     pro.createFirebase(apikey, authDom, projId, storageBuck, messagingSenderId, appId)
 
