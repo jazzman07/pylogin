@@ -2,14 +2,13 @@
 
 
 ### The project
-Pylogin is colection of codes that provide a simple login system for your web app - site.
+Pylogin is colection of codes that provide a simple login system for your web-app/site.
 
 ### How to use
-After executing the Pylogin initialization script(pylogin)  you can implement you Reactjs project under the Link tag inside log/src/Dashboard.js
+After executing the Pylogin initialization script(the pylogin command)  you can implement your Reactjs project under the Link tag inside log/src/Dashboard.js
 
 ### Bugs
 In case that you find a bug report it on github, or send an e-mail to pylogin@protonmail.com
-
 
 ### Instalation
 To install Pylogin, run in a terminal 
