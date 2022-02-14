@@ -21,5 +21,5 @@ To more information - documentation go to ouer site or github
 
 | name   |      link      |  Description |
 |----------|:-------------:|------:|
-| Site |  pylogin.netlify.app/ | Big documentation - General inf. |
+| Site |  pylogin.netlify.app/ | Large documentation - General inf. |
 | Github | github.com/jazzman07/pylogin/      |  Code - Small Documentation  |
